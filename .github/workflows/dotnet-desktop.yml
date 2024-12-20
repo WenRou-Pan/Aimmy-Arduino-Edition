@@ -2,6 +2,7 @@
 name: .NET Core Desktop
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "Aimmy-V2" ]
   pull_request:
