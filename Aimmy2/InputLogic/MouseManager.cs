@@ -103,15 +103,6 @@ namespace InputLogic
             Point control2 = new Point((int)(start.X + 2 * (end.X - start.X) / 3 + perpendicular.X), (int)(start.Y + 2 * (end.Y - start.Y) / 3 + perpendicular.Y));
 
             Point newPosition = CubicBezier(start, end, control1, control2, 1 - Dictionary.sliderSettings["Mouse Sensitivity (+/-)"]);
-
-            targetX = Math.Clamp(targetX, -150, 150);
-            targetY = Math.Clamp(targetY, -150, 150);
-
-            targetY = (int)(targetY * aspectRatioCorrection);
-
-            targetX += jitterX;
-            targetY += jitterY;
-
             arduinoMouse.SendMouseCommand(newPosition.X, newPosition.Y, 0);
 
             if (Dictionary.toggleState["Auto Trigger"])
