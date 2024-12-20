@@ -4,9 +4,9 @@ name: .NET Core Desktop
 on:
   workflow_dispatch:
   push:
-    branches: [ "Aimmy-V2" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "Aimmy-V2" ]
+    branches: [ "master ]
 
 jobs:
 
